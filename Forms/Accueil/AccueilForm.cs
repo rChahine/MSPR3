@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MSPR3
 {
-    public partial class Form1 : Form
+    public partial class AccueilForm : Form
     {
-        public Form1()
+        public AccueilForm()
         {
             InitializeComponent();
         }
