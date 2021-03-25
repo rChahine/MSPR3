@@ -1,7 +1,6 @@
 # Technologies utilisées
 <img src="https://img.shields.io/badge/csharp%20-purple?logo=c-sharp&style=for-the-badge" />
 
-<br>
 
 # Planning du projet
 
