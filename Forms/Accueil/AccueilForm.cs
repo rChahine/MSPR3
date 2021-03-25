@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MSPR3.Metiers;
 
 namespace MSPR3
 {
@@ -15,6 +16,8 @@ namespace MSPR3
         public AccueilForm()
         {
             InitializeComponent();
+            Client client = new Client(1, "pierre", "paul", new DateTime(1997, 3, 22));
+            Console.WriteLine(client.ToString());
         }
     }
 }

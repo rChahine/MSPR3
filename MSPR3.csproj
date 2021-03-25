@@ -52,8 +52,17 @@
     <Compile Include="Forms\Accueil\AccueilForm.Designer.cs">
       <DependentUpon>AccueilForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metiers\Client.cs" />
+    <Compile Include="Metiers\Commande.cs" />
+    <Compile Include="Metiers\Fournisseur.cs" />
+    <Compile Include="Metiers\Produit.cs" />
+    <Compile Include="Metiers\Salarie.cs" />
+    <Compile Include="Metiers\Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Accueil\AccueilForm.resx">
+      <DependentUpon>AccueilForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +85,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
