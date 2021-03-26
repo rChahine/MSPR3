@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
-    class Service
+    public class Service
     {
         private int id;
         private string designation;

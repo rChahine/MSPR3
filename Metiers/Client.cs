@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
-    class Client
+    public class Client
     {
         private int id;
         private string prenom;

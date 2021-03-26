@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
-    class Commande
+    public class Commande
     {
         private int id;
         private DateTime date;
