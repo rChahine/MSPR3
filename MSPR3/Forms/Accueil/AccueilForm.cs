@@ -19,25 +19,25 @@ namespace MSPR3
         public AccueilForm()
         {
             InitializeComponent();
-
         }
 
         private void bt_GA_Click(object sender, EventArgs e)
         {
-            MenuForm GA = new MenuForm();
+            Forms.GA.Menu.MenuForm GA = new Forms.GA.Menu.MenuForm();
             GA.ShowDialog();
             
         }
 
         private void bt_RH_Click(object sender, EventArgs e)
         {
-            MenuForm RH = new MenuForm();
+            Forms.RH.Menu.MenuForm RH = new Forms.RH.Menu.MenuForm();
             RH.ShowDialog();
         }
 
         private void bt_GF_Click(object sender, EventArgs e)
         {
-
+            Forms.GF.Menu.MenuForm GF = new Forms.GF.Menu.MenuForm();
+            GF.ShowDialog();
         }
     }
 }

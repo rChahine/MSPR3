@@ -16,25 +16,5 @@ namespace MSPR3.Forms.GA.Menu
         {
             InitializeComponent();
         }
-
-
-        private void bt_GA_Click(object sender, EventArgs e)
-        {
-            MenuForm GA = new MenuForm();
-            GA.Show();
-
-            this.Close();
-        }
-
-        private void bt_RH_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bt_GF_Click(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
