@@ -7,37 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MSPR3.Metiers;
-using MSPR3.Forms.GA.Menu;
-using MSPR3.Forms.RH.Menu;
-using MSPR3.Forms.GF.Menu;
 
-namespace MSPR3
+namespace MSPR3.Forms.GA.Menu
 {
-    public partial class AccueilForm : Form
+    public partial class MenuForm : Form
     {
-        public AccueilForm()
+        public MenuForm()
         {
             InitializeComponent();
-
         }
+
 
         private void bt_GA_Click(object sender, EventArgs e)
         {
             MenuForm GA = new MenuForm();
-            GA.ShowDialog();
-            
+            GA.Show();
+
+            this.Close();
         }
 
         private void bt_RH_Click(object sender, EventArgs e)
         {
-            MenuForm RH = new MenuForm();
-            RH.ShowDialog();
+
         }
 
         private void bt_GF_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }
