@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
-    class Fournisseur
+    public class Fournisseur
     {
         private int id;
         private string raisonSocial;

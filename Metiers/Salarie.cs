@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
-    class Salarie
+    public class Salarie
     {
 
         private int id;
