@@ -58,6 +58,7 @@ namespace MSPR3.Metiers.Tests
             Assert.AreEqual(designationProduit2, "Souris");
         }
 
+        [TestMethod()]
         public void FournisseurSetAttributesTests()
         {
             Fournisseur fournisseur = new Fournisseur(1, "testRaisonSocial", "testAdresse", new List<Produit>());
