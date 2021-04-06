@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Metiers\Fournisseur_Tests.cs" />
     <Compile Include="Metiers\Produit_Tests.cs" />
+    <Compile Include="Metiers\Salarie_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
