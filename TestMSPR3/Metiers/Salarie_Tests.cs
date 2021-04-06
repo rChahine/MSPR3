@@ -25,15 +25,12 @@ namespace MSPR3.Metiers.Tests
         {
             var dateNaiss = new DateTime(1996, 3, 22);
             Salarie salarie = new Salarie(1, "Jean", "Pierre", dateNaiss); 
-            var resultId = salarie.Id;
-            var resultPrenom = salarie.Prenom;
-            var resultNom = salarie.Nom;
-            var resultDateNaiss = salarie.DateNaiss;
+
             // Test Salarie attributes
-            Assert.AreEqual(resultId, 1);
-            Assert.AreEqual(resultPrenom, "Jean");
-            Assert.AreEqual(resultNom, "Pierre");
-            Assert.AreEqual(resultDateNaiss, dateNaiss);
+            Assert.AreEqual(salarie.Id, 1);
+            Assert.AreEqual(salarie.Prenom, "Jean");
+            Assert.AreEqual(salarie.Nom, "Pierre");
+            Assert.AreEqual(salarie.DateNaiss, dateNaiss);
         }
 
         [TestMethod()]

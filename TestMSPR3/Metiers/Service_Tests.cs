@@ -22,11 +22,10 @@ namespace MSPR3.Metiers.Tests
         public void ServiceAttributesTests()
         {
             Service service = new Service(1, "RH", new List<Salarie>());
-            var resultId = service.Id;
-            var resultDesignation = service.Designation;
+
             // Test Service attributes
-            Assert.AreEqual(resultId, 1);
-            Assert.AreEqual(resultDesignation, "RH");
+            Assert.AreEqual(service.Id, 1);
+            Assert.AreEqual(service.Designation, "RH");
         }
 
         [TestMethod()]

@@ -22,13 +22,11 @@ namespace MSPR3.Metiers.Tests
         public void FournisseurAttributesTests()
         {
             Fournisseur fournisseur = new Fournisseur(1, "testRaisonSocial", "testAdresse", new List<Produit>());
-            var resultAdresse = fournisseur.Adresse;
-            var resultId = fournisseur.Id;
-            var resultRaisonSocial = fournisseur.RaisonSocial;
+
             // Test Fournisseur attributes
-            Assert.AreEqual(resultAdresse, "testAdresse");
-            Assert.AreEqual(resultId, 1);
-            Assert.AreEqual(resultRaisonSocial, "testRaisonSocial");
+            Assert.AreEqual(fournisseur.Adresse, "testAdresse");
+            Assert.AreEqual(fournisseur.Id, 1);
+            Assert.AreEqual(fournisseur.RaisonSocial, "testRaisonSocial");
         }
 
         [TestMethod()]

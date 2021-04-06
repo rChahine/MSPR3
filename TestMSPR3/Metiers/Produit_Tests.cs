@@ -22,15 +22,12 @@ namespace MSPR3.Metiers.Tests
         public void ProduitAttributesTests()
         {
             Produit produit = new Produit(1, "PC", 5, 150.00);
-            var resultId = produit.Id;
-            var resultDesignation = produit.Designation;
-            var resultQuantite = produit.Quantite;
-            var resultPrix = produit.Prix;
+
             // Test Produit attributes
-            Assert.AreEqual(resultId, 1);
-            Assert.AreEqual(resultDesignation, "PC");
-            Assert.AreEqual(resultQuantite, 5);
-            Assert.AreEqual(resultPrix, 150.00);
+            Assert.AreEqual(produit.Id, 1);
+            Assert.AreEqual(produit.Designation, "PC");
+            Assert.AreEqual(produit.Quantite, 5);
+            Assert.AreEqual(produit.Prix, 150.00);
         }
 
         [TestMethod()]
