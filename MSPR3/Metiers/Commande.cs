@@ -10,16 +10,16 @@ namespace MSPR3.Metiers
     {
         private int id;
         private DateTime date;
-        private List<Dictionary<Produit, int>> produits; // TODO A verifier avec la team
+        private Dictionary<Produit, int> produits; // TODO A verifier avec la team
 
 
         # region getters and setters 
         public int Id { get => id; set => id = value; }
         public DateTime Date { get => date; set => date = value; }
-        public List<Dictionary<Produit, int>> Produits { get => produits; set => produits = value; }
+        public Dictionary<Produit, int> Produits { get => produits; set => produits = value; }
         #endregion
 
-        public Commande(int id, DateTime date, List<Dictionary<Produit, int>> produits)
+        public Commande(int id, DateTime date, Dictionary<Produit, int> produits)
         {
             this.id = id;
             this.date = date;
