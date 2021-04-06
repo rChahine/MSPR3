@@ -11,6 +11,15 @@ namespace MSPR3.Metiers.Tests
     [TestClass()]
     public class Client_Tests
     {
+        private readonly Produit produitLJ = new Produit(1, "Livret jeune", 1, 0);
+        private readonly Produit produitLivretA = new Produit(2, "Livret A", 1, 0);
+        private readonly Produit produitCompteBasique = new Produit(3, "Compte basique", 1, 0);
+        private readonly Produit produitCompteCommun = new Produit(4, "Compte commun", 1, 0);
+        private readonly Produit produitCarteBasique = new Produit(5, "Carte basique", 1, 0);
+        private readonly Produit produitSilverCard = new Produit(6, "Silver Card", 1, 0);
+        private readonly Produit produitGoldCard = new Produit(7, "Gold Card", 1, 0);
+        private readonly Produit produitBlackCard = new Produit(8, "Black Card", 1, 0);
+
         [TestMethod()]
         public void ClientTests()
         {
@@ -72,6 +81,82 @@ namespace MSPR3.Metiers.Tests
             Assert.AreEqual(client.DateNaiss.Year, 1996);
             Assert.AreEqual(client.DateNaiss.Month, 3);
             Assert.AreEqual(client.DateNaiss.Day, 22);
+        }
+
+        [TestMethod()]
+        public void ClientEligible25YoTests()
+        {
+            // Client 25 year old, 16000 RA
+            var year25yo = DateTime.Now.Year - 25;
+            var dateNaiss = new DateTime(year25yo, 3, 22);
+            Client client = new Client(1, "Jean", "Pierre", dateNaiss, 16000, false, false, false);
+            
+            //-----EstEligible Livret Jeune------
+            Assert.IsFalse(client.EstEligible(produitLJ, client));
+
+            client.PieceIdValide = true;
+            client.JustificatifActiviteValide = true;
+            client.JustificatifDomicileValide = true;
+
+            Assert.IsTrue(client.EstEligible(produitLJ, client));
+
+            //-----EstEligible Livret A------
+            Assert.IsTrue(client.EstEligible(produitLivretA, client));
+
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitCompteBasique, client));
+
+            //-----EstEligible Compte commune------
+            client.JustificatifActiviteValide = false;
+            Assert.IsFalse(client.EstEligible(produitCompteCommun, client));
+            client.JustificatifActiviteValide = true;
+            Assert.IsTrue(client.EstEligible(produitCompteCommun, client));
+
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitCarteBasique, client));
+            //-----EstEligible Compte basique------
+            Assert.IsFalse(client.EstEligible(produitSilverCard, client));
+            //-----EstEligible Compte basique------
+            Assert.IsFalse(client.EstEligible(produitGoldCard, client));
+            //-----EstEligible Compte basique------
+            Assert.IsFalse(client.EstEligible(produitBlackCard, client));
+        }
+
+        [TestMethod()]
+        public void ClientEligible46YoTests()
+        {
+            // Client 46 year old, 36000 RA
+            var year25yo = DateTime.Now.Year - 46;
+            var dateNaiss = new DateTime(year25yo, 3, 22);
+            Client client = new Client(1, "Jean", "Pierre", dateNaiss, 36000, false, false, false);
+
+            //-----EstEligible Livret Jeune------
+            Assert.IsFalse(client.EstEligible(produitLJ, client));
+
+            client.PieceIdValide = true;
+            client.JustificatifActiviteValide = true;
+            client.JustificatifDomicileValide = true;
+
+            //-----EstEligible Livret A------
+            Assert.IsTrue(client.EstEligible(produitLivretA, client));
+
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitCompteBasique, client));
+
+            //-----EstEligible Compte commune------
+            client.JustificatifActiviteValide = false;
+            Assert.IsFalse(client.EstEligible(produitCompteCommun, client));
+            client.JustificatifActiviteValide = true;
+            Assert.IsTrue(client.EstEligible(produitCompteCommun, client));
+
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitCarteBasique, client));
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitSilverCard, client));
+            //-----EstEligible Compte basique------
+            Assert.IsTrue(client.EstEligible(produitGoldCard, client));
+            //-----EstEligible Compte basique------
+            Assert.IsFalse(client.EstEligible(produitBlackCard, client));
         }
     }
 }
