@@ -16,7 +16,7 @@ namespace MSPR3.Metiers.Tests
         {
             //DatTime(Year, Month, Day)
             var date = new DateTime(2021, 4, 6);
-            Commande commande = new Commande(1, date, new List<Dictionary<Produit, int>>());
+            Commande commande = new Commande(1, date, new Dictionary<Produit, int>());
             Assert.IsInstanceOfType(commande, typeof(Commande));
         }
 
@@ -24,19 +24,18 @@ namespace MSPR3.Metiers.Tests
         public void CommandeAttributesTests()
         {
             var date = new DateTime(2021, 4, 6);
-            Commande commande = new Commande(1, date, new List<Dictionary<Produit, int>>());
-            var resultId = commande.Id;
-            var resultDate = commande.Date;
+            Commande commande = new Commande(1, date, new Dictionary<Produit, int>());
+
             // Test Commande attributes
-            Assert.AreEqual(resultId, 1);
-            Assert.AreEqual(resultDate, date);
+            Assert.AreEqual(commande.Id, 1);
+            Assert.AreEqual(commande.Date, date);
         }
 
         [TestMethod()]
         public void CommandeSetAttributesTests()
         {
             var date = new DateTime(2021, 4, 6);
-            Commande commande = new Commande(1, date, new List<Dictionary<Produit, int>>());
+            Commande commande = new Commande(1, date, new Dictionary<Produit, int>());
 
             var NewDate = new DateTime(2021, 4, 25);
             commande.Id = 99;
@@ -51,9 +50,7 @@ namespace MSPR3.Metiers.Tests
         {
             // Test Commande attribute List<Dictionary<Produit, int>>()
             var date = new DateTime(2021, 4, 6);
-            Commande commande = new Commande(1, date, new List<Dictionary<Produit, int>>());
-
-            List<Dictionary<Produit, int>> listDicoProd = new List<Dictionary<Produit, int>>();
+            Commande commande = new Commande(1, date, new Dictionary<Produit, int>());
 
             //Produit, quantite
             Dictionary<Produit, int> dicoProd = new Dictionary<Produit, int>();
@@ -62,14 +59,9 @@ namespace MSPR3.Metiers.Tests
             Produit produit2 = new Produit(2, "Souris", 15, 15.00);
 
             // Test adding Produit to a Dictionary 
-            dicoProd.Add(produit, 5);
-            dicoProd.Add(produit2, 2);
-            Assert.AreEqual(dicoProd.Count, 2);
-
-            // Test adding Dictionary to a list 
-            listDicoProd.Add(dicoProd);
-
-            Assert.AreEqual(listDicoProd.Count, 1);
+            commande.Produits.Add(produit, 5);
+            commande.Produits.Add(produit2, 2);
+            Assert.AreEqual(commande.Produits.Count, 2);
 
         }
     }
