@@ -33,7 +33,7 @@ namespace MSPR3.Metiers.Tests
         public void ServiceSetAttributesTests()
         {
             Service service = new Service(1, "RH", new List<Salarie>());
-
+            // Set Id, Designation
             service.Id = 99;
             service.Designation = "RessHum";
             // Test Service attributes
@@ -44,7 +44,7 @@ namespace MSPR3.Metiers.Tests
         [TestMethod()]
         public void ServiceListSalarieTests()
         {
-            // Test Fournisseur attribute List<Produit>()
+            // Test Servcie attribute List<Salarie>()
             Service service = new Service(1, "RH", new List<Salarie>());
             var dateNaissSalarie = new DateTime(1996, 3, 22);
             var dateNaissSalarie2 = new DateTime(1992, 9, 4);

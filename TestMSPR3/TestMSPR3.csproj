@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Metiers\Client_Tests.cs" />
+    <Compile Include="Metiers\Commande_Tests.cs" />
     <Compile Include="Metiers\Fournisseur_Tests.cs" />
     <Compile Include="Metiers\Produit_Tests.cs" />
     <Compile Include="Metiers\Salarie_Tests.cs" />
