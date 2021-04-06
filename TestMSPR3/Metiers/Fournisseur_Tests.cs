@@ -21,9 +21,54 @@ namespace MSPR3.Metiers.Tests
         [TestMethod()]
         public void FournisseurAttributesTests()
         {
-            Fournisseur fournisseur = new Fournisseur(1, "test", "test", null);
-            var result = fournisseur.Adresse;
-            Assert.AreEqual(result, "test");
+            Fournisseur fournisseur = new Fournisseur(1, "testRaisonSocial", "testAdresse", new List<Produit>());
+            var resultAdresse = fournisseur.Adresse;
+            var resultId = fournisseur.Id;
+            var resultRaisonSocial = fournisseur.RaisonSocial;
+            // Test Fournisseur attributes
+            Assert.AreEqual(resultAdresse, "testAdresse");
+            Assert.AreEqual(resultId, 1);
+            Assert.AreEqual(resultRaisonSocial, "testRaisonSocial");
+        }
+
+        [TestMethod()]
+        public void FournisseurListProduitTests()
+        {
+            // Test Fournisseur attribute List<Produit>()
+            Fournisseur fournisseur = new Fournisseur(1, "testRaisonSocial", "testAdresse", new List<Produit>());
+            Produit produit = new Produit(1, "PC", 5, 150.00);
+            Produit produit2 = new Produit(2, "Souris", 15, 15.00);
+
+            // Test adding Produit to a list 
+            fournisseur.Produits.Add(produit);
+            fournisseur.Produits.Add(produit2);
+            var resultSizeofProduits = fournisseur.Produits.Count;
+            Assert.AreEqual(resultSizeofProduits, 2);
+
+            // Test adding Produit to a list 
+            Produit produit3 = new Produit(3, "Clavier", 5, 10.00);
+            fournisseur.Produits.Add(produit3);
+            var newResultSizeofProduits = fournisseur.Produits.Count;
+            Assert.AreEqual(newResultSizeofProduits, 3);
+
+            // Test Produit names in a list
+            var designationProduit = fournisseur.Produits[0].Designation;
+            var designationProduit2 = fournisseur.Produits[1].Designation;
+            Assert.AreEqual(designationProduit, "PC");
+            Assert.AreEqual(designationProduit2, "Souris");
+        }
+
+        public void FournisseurSetAttributesTests()
+        {
+            Fournisseur fournisseur = new Fournisseur(1, "testRaisonSocial", "testAdresse", new List<Produit>());
+
+            fournisseur.Id = 99;
+            fournisseur.RaisonSocial = "newRaisonSocial";
+            fournisseur.Adresse = "newAdresse";
+            // Test Fournisseur attributes
+            Assert.AreEqual(fournisseur.Id, 99);
+            Assert.AreEqual(fournisseur.RaisonSocial, "newRaisonSocial");
+            Assert.AreEqual(fournisseur.Adresse, "newAdresse");
         }
     }
 }
