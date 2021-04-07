@@ -92,34 +92,34 @@ namespace MSPR3.Metiers.Tests
             Client client = new Client(1, "Jean", "Pierre", dateNaiss, 16000, false, false, false);
             
             //-----EstEligible Livret Jeune------
-            Assert.IsFalse(client.EstEligible(produitLJ, client));
+            Assert.IsFalse(client.EstEligible(produitLJ));
 
             client.PieceIdValide = true;
             client.JustificatifActiviteValide = true;
             client.JustificatifDomicileValide = true;
 
-            Assert.IsTrue(client.EstEligible(produitLJ, client));
+            Assert.IsTrue(client.EstEligible(produitLJ));
 
             //-----EstEligible Livret A------
-            Assert.IsTrue(client.EstEligible(produitLivretA, client));
+            Assert.IsTrue(client.EstEligible(produitLivretA));
 
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitCompteBasique, client));
+            Assert.IsTrue(client.EstEligible(produitCompteBasique));
 
             //-----EstEligible Compte commune------
             client.JustificatifActiviteValide = false;
-            Assert.IsFalse(client.EstEligible(produitCompteCommun, client));
+            Assert.IsFalse(client.EstEligible(produitCompteCommun));
             client.JustificatifActiviteValide = true;
-            Assert.IsTrue(client.EstEligible(produitCompteCommun, client));
+            Assert.IsTrue(client.EstEligible(produitCompteCommun));
 
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitCarteBasique, client));
+            Assert.IsTrue(client.EstEligible(produitCarteBasique));
             //-----EstEligible Compte basique------
-            Assert.IsFalse(client.EstEligible(produitSilverCard, client));
+            Assert.IsFalse(client.EstEligible(produitSilverCard));
             //-----EstEligible Compte basique------
-            Assert.IsFalse(client.EstEligible(produitGoldCard, client));
+            Assert.IsFalse(client.EstEligible(produitGoldCard));
             //-----EstEligible Compte basique------
-            Assert.IsFalse(client.EstEligible(produitBlackCard, client));
+            Assert.IsFalse(client.EstEligible(produitBlackCard));
         }
 
         [TestMethod()]
@@ -131,32 +131,32 @@ namespace MSPR3.Metiers.Tests
             Client client = new Client(1, "Jean", "Pierre", dateNaiss, 36000, false, false, false);
 
             //-----EstEligible Livret Jeune------
-            Assert.IsFalse(client.EstEligible(produitLJ, client));
+            Assert.IsFalse(client.EstEligible(produitLJ));
 
             client.PieceIdValide = true;
             client.JustificatifActiviteValide = true;
             client.JustificatifDomicileValide = true;
 
             //-----EstEligible Livret A------
-            Assert.IsTrue(client.EstEligible(produitLivretA, client));
+            Assert.IsTrue(client.EstEligible(produitLivretA));
 
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitCompteBasique, client));
+            Assert.IsTrue(client.EstEligible(produitCompteBasique));
 
             //-----EstEligible Compte commune------
             client.JustificatifActiviteValide = false;
-            Assert.IsFalse(client.EstEligible(produitCompteCommun, client));
+            Assert.IsFalse(client.EstEligible(produitCompteCommun));
             client.JustificatifActiviteValide = true;
-            Assert.IsTrue(client.EstEligible(produitCompteCommun, client));
+            Assert.IsTrue(client.EstEligible(produitCompteCommun));
 
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitCarteBasique, client));
+            Assert.IsTrue(client.EstEligible(produitCarteBasique));
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitSilverCard, client));
+            Assert.IsTrue(client.EstEligible(produitSilverCard));
             //-----EstEligible Compte basique------
-            Assert.IsTrue(client.EstEligible(produitGoldCard, client));
+            Assert.IsTrue(client.EstEligible(produitGoldCard));
             //-----EstEligible Compte basique------
-            Assert.IsFalse(client.EstEligible(produitBlackCard, client));
+            Assert.IsFalse(client.EstEligible(produitBlackCard));
         }
     }
 }
