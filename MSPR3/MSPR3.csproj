@@ -55,6 +55,24 @@
     <Compile Include="Forms\Accueil\AccueilForm.Designer.cs">
       <DependentUpon>AccueilForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GF\Facturation\FacturationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GF\Facturation\FacturationForm.Designer.cs">
+      <DependentUpon>FacturationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GF\GestionAchat\GestionAchatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GF\GestionAchat\GestionAchatForm.Designer.cs">
+      <DependentUpon>GestionAchatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GF\GestionFournisseur\GestionFournisseurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GF\GestionFournisseur\GestionFournisseurForm.Designer.cs">
+      <DependentUpon>GestionFournisseurForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GF\Menu\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +103,18 @@
       <DependentUpon>AccueilForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GA\Menu\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GF\Facturation\FacturationForm.resx">
+      <DependentUpon>FacturationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GF\GestionAchat\GestionAchatForm.resx">
+      <DependentUpon>GestionAchatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GF\GestionFournisseur\GestionFournisseurForm.resx">
+      <DependentUpon>GestionFournisseurForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GF\Menu\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
