@@ -1,0 +1,119 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MSPR3.Forms.GA.CompteResultat
+{
+    public partial class CompteResultat : Form
+    {
+
+        private int totalIncome = 0;
+        private int totalCharge = 0;
+        private int balance = 0;
+
+        public CompteResultat()
+        {
+            InitializeComponent();
+            lbTotalCharge.Text = Convert.ToString(this.totalCharge);
+            lbTotalIncome.Text = Convert.ToString(this.totalIncome);
+            lbBalance.Text = Convert.ToString(this.balance);
+        }
+
+        /// <summary>
+        /// Compute balance and changes le label "balance"
+        /// </summary>
+        private void computeBalance()
+        {
+            int charges = 0;
+            int incomes = 0;
+
+            foreach(DataGridViewRow row in dgvCharge.Rows)
+            {
+                charges += (int)row.Cells[0].Value;
+            }
+
+            foreach (DataGridViewRow row in dgvIncome.Rows)
+            {
+                incomes += (int)row.Cells[0].Value;
+            }
+
+            // Update balance label
+            this.lbBalance.Text = Convert.ToString(incomes - charges + " €");
+        }
+
+        /// <summary>
+        /// Ajoute un revenu dans le datagridview et actualise le label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btAddIncome_Click(object sender, EventArgs e)
+        {
+            try { 
+                int value = Int32.Parse(tbIncome.Text);
+                int index = dgvIncome.Rows.Add();
+
+                dgvIncome.Rows[index].Cells[0].Value = value;
+
+                // Ajouter au total des revenus
+                this.totalIncome += value;
+                this.lbTotalIncome.Text = Convert.ToString(this.totalIncome + " €");
+
+                this.computeBalance();
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("La valeur doit-être numérique", "Une erreur s'est produite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Ajoute une charge dans le datagridview et change la valeur du label
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btAddCharge_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int value = Int32.Parse(tbCharge.Text);
+                int index = dgvCharge.Rows.Add();
+
+                dgvCharge.Rows[index].Cells[0].Value = value;
+
+                // Ajouter au total des charges
+                this.totalCharge += value;
+                this.lbTotalCharge.Text = Convert.ToString(this.totalCharge + " €");
+
+                this.computeBalance();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("La valeur doit-être numérique", "Une erreur s'est produite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvCharge_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(this.dgvCharge.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+        private void dgvIncome_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            using (SolidBrush b = new SolidBrush(this.dgvIncome.RowHeadersDefaultCellStyle.ForeColor))
+            {
+                e.Graphics.DrawString((e.RowIndex + 1).ToString(), e.InheritedRowStyle.Font, b, e.RowBounds.Location.X + 10, e.RowBounds.Location.Y + 4);
+            }
+        }
+
+    }
+}
