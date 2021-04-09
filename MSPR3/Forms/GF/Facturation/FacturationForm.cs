@@ -44,10 +44,10 @@ namespace MSPR3.Forms.GF.Facturation
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var file = (FileInfo)listBox1.SelectedItem;
-            Process.Start(file.FullName); 
-        }
+        //private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    var file = (FileInfo)listBox1.SelectedItem;
+        //    Process.Start(file.FullName); 
+        //}
     }
 }
