@@ -61,6 +61,12 @@
     <Compile Include="Forms\GF\Menu\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RH\Menu\FormRHStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RH\Menu\FormRHStock.Designer.cs">
+      <DependentUpon>FormRHStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RH\Menu\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
       <DependentUpon>AccueilForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GA\Menu\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RH\Menu\FormRHStock.resx">
+      <DependentUpon>FormRHStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RH\Menu\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
