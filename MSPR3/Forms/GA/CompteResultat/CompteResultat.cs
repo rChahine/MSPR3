@@ -115,5 +115,54 @@ namespace MSPR3.Forms.GA.CompteResultat
             }
         }
 
+        private void btLineIncome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int line = Int32.Parse(lineIncome.Text) - 1;
+                int value = (int)dgvIncome.Rows[line].Cells[0].Value;
+
+                dgvIncome.Rows.RemoveAt(line);
+
+                // Enlever un income
+                this.totalCharge -= value;
+                this.lbTotalCharge.Text = Convert.ToString(this.totalCharge + " €");
+
+                this.computeBalance();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("La valeur doit-être numérique", "Une erreur s'est produite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Pour supprimer une ligne, il faut donner le numéro de ligne correspondant à la case que vous voulez supprimer.", "Numéro de ligne incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btLineCharge_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int line = Int32.Parse(lineCharge.Text) -1;
+                int value = (int)dgvCharge.Rows[line].Cells[0].Value;
+
+                dgvIncome.Rows.RemoveAt(line);
+
+                // Enlever un income
+                this.totalIncome -= value;
+                this.lbTotalIncome.Text = Convert.ToString(this.totalIncome + " €");
+
+                this.computeBalance();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("La valeur doit-être numérique", "Une erreur s'est produite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Numéro de ligne incorrect", "Pour supprimer une ligne, il faut donner le numéro de ligne correspondant à la case que vous voulez supprimer.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

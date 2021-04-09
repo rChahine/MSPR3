@@ -39,14 +39,6 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lineCharge = new System.Windows.Forms.TextBox();
-            this.lineIncome = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.lbBalance = new System.Windows.Forms.Label();
             this.lbTotalIncome = new System.Windows.Forms.Label();
             this.lbTotalCharge = new System.Windows.Forms.Label();
@@ -59,8 +51,16 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.btLineIncome = new System.Windows.Forms.Button();
+            this.btLineCharge = new System.Windows.Forms.Button();
+            this.lineIncome = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lineCharge = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCharge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncome)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -186,74 +186,6 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(286, 90);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 17);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "€";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(286, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 17);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "€";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(308, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 27);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "ok";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(308, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 27);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "ok";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // lineCharge
-            // 
-            this.lineCharge.Location = new System.Drawing.Point(168, 87);
-            this.lineCharge.Name = "lineCharge";
-            this.lineCharge.Size = new System.Drawing.Size(112, 22);
-            this.lineCharge.TabIndex = 29;
-            // 
-            // lineIncome
-            // 
-            this.lineIncome.Location = new System.Drawing.Point(168, 47);
-            this.lineIncome.Name = "lineIncome";
-            this.lineIncome.Size = new System.Drawing.Size(112, 22);
-            this.lineIncome.TabIndex = 28;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(157, 17);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Supprimer une charge :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(149, 17);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Supprimer un revenu :";
-            // 
             // lbBalance
             // 
             this.lbBalance.AutoSize = true;
@@ -305,7 +237,7 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.btAddCharge.Name = "btAddCharge";
             this.btAddCharge.Size = new System.Drawing.Size(42, 27);
             this.btAddCharge.TabIndex = 20;
-            this.btAddCharge.Text = "ok";
+            this.btAddCharge.Text = "➕";
             this.btAddCharge.UseVisualStyleBackColor = true;
             this.btAddCharge.Click += new System.EventHandler(this.btAddCharge_Click);
             // 
@@ -315,7 +247,7 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.btAddIncome.Name = "btAddIncome";
             this.btAddIncome.Size = new System.Drawing.Size(42, 27);
             this.btAddIncome.TabIndex = 19;
-            this.btAddIncome.Text = "ok";
+            this.btAddIncome.Text = "➕";
             this.btAddIncome.UseVisualStyleBackColor = true;
             this.btAddIncome.Click += new System.EventHandler(this.btAddIncome_Click);
             // 
@@ -353,11 +285,11 @@ namespace MSPR3.Forms.GA.CompteResultat
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.btLineIncome);
+            this.groupBox3.Controls.Add(this.btLineCharge);
             this.groupBox3.Controls.Add(this.lineIncome);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.lineCharge);
@@ -369,6 +301,67 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Supprimer une ligne d\'un tableau";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 125);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(207, 17);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "⚠️ Indiquez un numéro de ligne";
+            // 
+            // btLineIncome
+            // 
+            this.btLineIncome.Location = new System.Drawing.Point(308, 47);
+            this.btLineIncome.Name = "btLineIncome";
+            this.btLineIncome.Size = new System.Drawing.Size(42, 27);
+            this.btLineIncome.TabIndex = 30;
+            this.btLineIncome.Text = "➖";
+            this.btLineIncome.UseVisualStyleBackColor = true;
+            this.btLineIncome.Click += new System.EventHandler(this.btLineIncome_Click);
+            // 
+            // btLineCharge
+            // 
+            this.btLineCharge.Location = new System.Drawing.Point(308, 85);
+            this.btLineCharge.Name = "btLineCharge";
+            this.btLineCharge.Size = new System.Drawing.Size(42, 27);
+            this.btLineCharge.TabIndex = 31;
+            this.btLineCharge.Text = "➖";
+            this.btLineCharge.UseVisualStyleBackColor = true;
+            this.btLineCharge.Click += new System.EventHandler(this.btLineCharge_Click);
+            // 
+            // lineIncome
+            // 
+            this.lineIncome.Location = new System.Drawing.Point(209, 47);
+            this.lineIncome.Name = "lineIncome";
+            this.lineIncome.Size = new System.Drawing.Size(71, 22);
+            this.lineIncome.TabIndex = 28;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(149, 17);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Supprimer un revenu :";
+            // 
+            // lineCharge
+            // 
+            this.lineCharge.Location = new System.Drawing.Point(209, 87);
+            this.lineCharge.Name = "lineCharge";
+            this.lineCharge.Size = new System.Drawing.Size(71, 22);
+            this.lineCharge.TabIndex = 29;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(157, 17);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Supprimer une charge :";
+            // 
             // groupBox4
             // 
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
@@ -378,14 +371,23 @@ namespace MSPR3.Forms.GA.CompteResultat
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajouter une ligne dans un tableau";
             // 
-            // label13
+            // label9
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 125);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(207, 17);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "⚠️ Indiquez un numéro de ligne";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(181, 47);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(22, 17);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "n°";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(181, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 17);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "n°";
             // 
             // CompteResultat
             // 
@@ -433,10 +435,8 @@ namespace MSPR3.Forms.GA.CompteResultat
         private System.Windows.Forms.Label lbTotalCharge;
         private System.Windows.Forms.DataGridViewTextBoxColumn Charges;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btLineCharge;
+        private System.Windows.Forms.Button btLineIncome;
         private System.Windows.Forms.TextBox lineCharge;
         private System.Windows.Forms.TextBox lineIncome;
         private System.Windows.Forms.Label label11;
@@ -444,5 +444,7 @@ namespace MSPR3.Forms.GA.CompteResultat
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
