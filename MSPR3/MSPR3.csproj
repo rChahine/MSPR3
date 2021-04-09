@@ -126,6 +126,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Forms\GF\Facturation\ExempleFactures\Modele-Facture1.pdf" />
+    <None Include="Forms\GF\Facturation\ExempleFactures\Modele-Facture2.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
