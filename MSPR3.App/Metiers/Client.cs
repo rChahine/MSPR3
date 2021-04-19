@@ -41,12 +41,12 @@ namespace MSPR3.Metiers
             this.justificatifActiviteValide = justificatifActiviteValide;
         }
 
-        public bool EstEligible(Produit produit) 
+        public bool EstEligible(Produit produit, Client client) 
         {
             switch (produit.Designation)
             {
                 case "Livret jeune":
-                    if (CalculAge() <= 25 && PeutEtreEligible())
+                    if (client.CalculAge() <= 25 && PeutEtreEligible())
                         return true;
                     else
                         return false;
@@ -66,22 +66,22 @@ namespace MSPR3.Metiers
                     else
                         return false;
                 case "Carte basique":
-                    if (CalculAge() >= 16 && PeutEtreEligible())
+                    if (client.CalculAge() >= 16 && PeutEtreEligible())
                         return true;
                     else
                         return false;
                 case "Silver Card":
-                    if (CalculAge() >= 18 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 28000)
+                    if (client.CalculAge() >= 18 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 28000)
                         return true;
                     else
                         return false;
                 case "Gold Card":
-                    if (CalculAge() >= 23 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 35000)
+                    if (client.CalculAge() >= 23 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 35000)
                         return true;
                     else
                         return false;
                 case "Black Card":
-                    if (CalculAge() >= 26 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 80000)
+                    if (client.CalculAge() >= 26 && PeutEtreEligible() && justificatifActiviteValide && salaireAnnuel >= 80000)
                         return true;
                     else
                         return false;

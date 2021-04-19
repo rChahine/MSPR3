@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.TitreMenuGA = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // TitreMenuGA
+            // 
+            this.TitreMenuGA.AutoSize = true;
+            this.TitreMenuGA.Location = new System.Drawing.Point(279, 80);
+            this.TitreMenuGA.Name = "TitreMenuGA";
+            this.TitreMenuGA.Size = new System.Drawing.Size(138, 20);
+            this.TitreMenuGA.TabIndex = 0;
+            this.TitreMenuGA.Text = "Gestions des achats";
             // 
             // GestionAchatForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 562);
+            this.Controls.Add(this.TitreMenuGA);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "GestionAchatForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label TitreMenuGA;
     }
 }

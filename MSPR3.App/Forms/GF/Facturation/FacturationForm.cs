@@ -14,6 +14,7 @@ namespace MSPR3.Forms.GF.Facturation
 {
     public partial class FacturationForm : Form
     {
+        private string filePath;
         public FacturationForm()
         {
             InitializeComponent();
@@ -24,30 +25,51 @@ namespace MSPR3.Forms.GF.Facturation
         private void button1_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog OFD = new OpenFileDialog();
-            OFD.Filter = "pdf files (*.pdf)|*.pdf|All files (*.*)|*.*";
+            OFD.Filter = "pdf files (*.pdf)|*.pdf";
             OFD.FilterIndex = 2;
             OFD.RestoreDirectory = true;
+            OFD.Multiselect = true;
 
             if (OFD.ShowDialog() == DialogResult.OK)
             {
-                listBox1.Items.Clear();
-                var filePath = OFD.FileName;
-                var fileStream = OFD.OpenFile();
-
-                using (StreamReader reader = new StreamReader(fileStream))
+                var test = OFD.SafeFileNames;
+                for (var i=0; i<test.Length; i++)
                 {
-                    var fileContent = reader.ReadToEnd();
-                }
+                    var fileStream = OFD.OpenFile();
 
-                listBox1.Items.Add(filePath);
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        var fileContent = reader.ReadToEnd();
+                    }
+
+                    listBox1.Items.Add(OFD.FileNames[i]);
+                }
+                
             }
 
         }
 
-        //private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    var file = (FileInfo)listBox1.SelectedItem;
-        //    Process.Start(file.FullName); 
-        //}
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                filePath = listBox1.SelectedItem.ToString();
+            }
+        }
+
+        private void ButtonView_Click(object sender, EventArgs e)
+        {
+            launchPDFReader();
+        }
+
+        private void launchPDFReader()
+        {
+            using (Process myProcess = new Process())
+            {
+                var path = Path.Combine(Environment.CurrentDirectory, "FreePDFReader.exe");
+                myProcess.StartInfo.FileName = path;
+                Process.Start(myProcess.StartInfo.FileName, filePath);
+            }
+        }
     }
 }

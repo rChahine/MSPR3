@@ -15,6 +15,8 @@ namespace MSPR3.Forms.GF.GestionAchat
         public GestionAchatForm()
         {
             InitializeComponent();
+
+            TitreMenuGA.Font = new System.Drawing.Font(TitreMenuGA.Font.Name, 16F);
         }
     }
 }
