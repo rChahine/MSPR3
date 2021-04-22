@@ -4,7 +4,7 @@ pipeline {
         stage('tests') {
             steps {
                 bat '''
-                    dotnet tests
+                    dotnet test
                 '''
             }
         }
