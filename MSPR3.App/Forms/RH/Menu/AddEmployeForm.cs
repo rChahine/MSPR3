@@ -44,21 +44,22 @@ namespace MSPR3.Forms.RH.Menu
             Employe newEmploye = new Employe(textBoxNom.Text, textBoxPrenom.Text, textBoxService.Text, textBoxDateRecrutement.Text);
             AddEmployeToData(newEmploye);
 
+            Close();
+
+            Forms.RH.Menu.EmployesForm RH = new Forms.RH.Menu.EmployesForm();
+            RH.ShowDialog();
         }
 
         private void AddEmployeToData(Employe newEmploye)
         {
             List<Employe> employelist = new List<Employe>();
-            string json = File.ReadAllText("../../../Forms/RH/Data/employeesData.json");
-            dynamic allEmployes = JObject.Parse(json);
-            var employeStock = allEmployes.Stock.ToString();
 
-            var listEmployeStock = JsonConvert.DeserializeObject<List<Employe>>(employeStock);
-            listEmployeStock.Add(newEmploye);
+            string json = File.ReadAllText("../../../Forms/RH/Data/employeesDataStock.json");
+            employelist = JsonConvert.DeserializeObject<List<Employe>>(json);
 
-            employeStock.SetStock(JsonConvert.SerializeObject(listEmployeStock, Formatting.Indented));
-            var oui = 2;
+            employelist.Add(newEmploye);
 
+            File.WriteAllText("../../../Forms/RH/Data/employeesDataStock.json", JsonConvert.SerializeObject(employelist));
         }
 
     }
