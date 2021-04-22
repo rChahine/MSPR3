@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
+    /// <summary>
+    /// Classe Client
+    /// </summary>
     public class Client
     {
         private int id;
@@ -28,7 +31,17 @@ namespace MSPR3.Metiers
         public bool JustificatifActiviteValide { get => justificatifActiviteValide; set => justificatifActiviteValide = value; }
         #endregion
 
-
+        /// <summary>
+        /// Constructeur de la classe Client
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="prenom"></param>
+        /// <param name="nom"></param>
+        /// <param name="dateNaiss"></param>
+        /// <param name="salaireAnnuel"></param>
+        /// <param name="pieceIdValide"></param>
+        /// <param name="justificatifDomicileValide"></param>
+        /// <param name="justificatifActiviteValide"></param>
         public Client(int id, string prenom, string nom, DateTime dateNaiss, int salaireAnnuel, bool pieceIdValide, bool justificatifDomicileValide, bool justificatifActiviteValide)
         {
             this.id = id;
@@ -40,7 +53,12 @@ namespace MSPR3.Metiers
             this.justificatifDomicileValide = justificatifDomicileValide;
             this.justificatifActiviteValide = justificatifActiviteValide;
         }
-
+        
+        /// <summary>
+        /// Retourne si le Client est éligible a un Produit
+        /// </summary>
+        /// <param name="produit"></param>
+        /// <returns>Retourne false ou true</returns>
         public bool EstEligible(Produit produit) 
         {
             switch (produit.Designation)
@@ -89,12 +107,22 @@ namespace MSPR3.Metiers
                     return false;
             }
         }
-        private int CalculAge()
+
+        /// <summary>
+        /// Retourne l'age du Client
+        /// </summary>
+        /// <returns>Retourne age</returns>
+        public int CalculAge()
         {
             int age = DateTime.Now.Year - DateNaiss.Year;
             return age;
         }
-        private bool PeutEtreEligible()
+
+        /// <summary>
+        /// Retourne si le Client peut être éligible en fonction si piece d'identité et justificatif domicile sont ok
+        /// </summary>
+        /// <returns>Retourne false ou true</returns>
+        public bool PeutEtreEligible()
         {
             return pieceIdValide && justificatifDomicileValide;
         }

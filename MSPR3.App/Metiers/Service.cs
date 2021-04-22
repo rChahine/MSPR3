@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
+    /// <summary>
+    /// Classe Service
+    /// </summary>
     public class Service
     {
         private int id;
@@ -20,7 +23,12 @@ namespace MSPR3.Metiers
 
         #endregion
 
-
+        /// <summary>
+        /// Constructeur de la classe Service
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="designation"></param>
+        /// <param name="salaries"></param>
         public Service(int id, string designation, List<Salarie> salaries)
         {
             this.id = id;

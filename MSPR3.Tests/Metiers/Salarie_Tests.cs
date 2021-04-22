@@ -4,8 +4,14 @@ using Xunit;
 
 namespace MSPR3.Metiers.Tests
 {
+    /// <summary>
+    /// Classe Salarie_Tests
+    /// </summary>
     public class Salarie_Tests
     {
+        /// <summary>
+        /// Test le type de la classe Salarie
+        /// </summary>
         [Fact]
         public void SalarieTests()
         {
@@ -15,6 +21,9 @@ namespace MSPR3.Metiers.Tests
             Assert.IsType<Salarie>(salarie);
         }
 
+        /// <summary>
+        /// Test les attributs de la classe Salarie
+        /// </summary>
         [Fact]
         public void SalarieAttributesTests()
         {
@@ -28,6 +37,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal(salarie.DateNaiss, dateNaiss);
         }
 
+        // <summary>
+        /// Test le changement d'un attribut avec les setters
+        /// </summary>
         [Fact]
         public void SalarieSetAttributesTests()
         {
@@ -46,6 +58,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal(expected: salarie.DateNaiss, NewDateNaiss);
         }
 
+        /// <summary>
+        /// Test la date de naissance d'un Salarie
+        /// </summary>
         [Fact]
         public void SalarieDateAttributesTests()
         {

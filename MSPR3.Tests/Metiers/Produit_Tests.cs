@@ -4,8 +4,14 @@ using Xunit;
 
 namespace MSPR3.Metiers.Tests
 {
+    /// <summary>
+    /// Classe Produit_Tests
+    /// </summary>
     public class Produit_Tests
     {
+        /// <summary>
+        /// Test le type de la classe Produit
+        /// </summary>
         [Fact]
         public void ProduitTests()
         {
@@ -13,6 +19,9 @@ namespace MSPR3.Metiers.Tests
             Assert.IsType<Produit>(produit);
         }
 
+        /// <summary>
+        /// Test les attributs de la classe Produit
+        /// </summary>
         [Fact]
         public void ProduitAttributesTests()
         {
@@ -25,6 +34,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal(150.00, produit.Prix);
         }
 
+        /// <summary>
+        /// Test le changement d'un attribut avec les setters
+        /// </summary>
         [Fact]
         public void ProduitSetAttributesTests()
         {

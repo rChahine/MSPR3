@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
+    /// <summary>
+    /// Classe Salarie
+    /// </summary>
     public class Salarie
     {
 
@@ -22,7 +25,13 @@ namespace MSPR3.Metiers
         public DateTime DateNaiss { get => dateNaiss; set => dateNaiss = value; }
         #endregion
 
-
+        /// <summary>
+        /// Constructeur de la classe Salarie
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="prenom"></param>
+        /// <param name="nom"></param>
+        /// <param name="dateNaiss"></param>
         public Salarie(int id, string prenom, string nom, DateTime dateNaiss)
         {
             this.id = id;

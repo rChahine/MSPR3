@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
+    /// <summary>
+    /// Classe Commande
+    /// </summary>
     public class Commande
     {
         private int id;
@@ -19,6 +22,12 @@ namespace MSPR3.Metiers
         public Dictionary<Produit, int> Produits { get => produits; set => produits = value; }
         #endregion
 
+        /// <summary>
+        /// Construteur de la classe Commande
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="date"></param>
+        /// <param name="produits"></param>
         public Commande(int id, DateTime date, Dictionary<Produit, int> produits)
         {
             this.id = id;

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MSPR3.Metiers
 {
+    /// <summary>
+    /// Classe Fournisseur
+    /// </summary>
     public class Fournisseur
     {
         private int id;
@@ -21,7 +24,13 @@ namespace MSPR3.Metiers
         public List<Produit> Produits { get => produits; set => produits = value; }
         #endregion
 
-
+        /// <summary>
+        /// Constructeur de la classe Fournisseur
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="raisonSocial"></param>
+        /// <param name="adresse"></param>
+        /// <param name="produits"></param>
         public Fournisseur(int id, string raisonSocial, string adresse, List<Produit> produits)
         {
             this.id = id;
