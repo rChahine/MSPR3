@@ -14,10 +14,12 @@ namespace MSPR3.Forms.RH.Menu
 {
     public partial class EmployesForm : Form
     {
+        private string jsonString;
+
         public EmployesForm()
         {
             InitializeComponent();
-
+            GetEmployeData();
             Employe employe1 = new Employe("Asri", "Nicolas", "IT", "12/12/2020");
             Employe employe2 = new Employe("Asri", "Nicolas", "IT", "12/12/2020");
 
@@ -31,7 +33,7 @@ namespace MSPR3.Forms.RH.Menu
             listViewEmploye.Columns.Add("Service", 100, HorizontalAlignment.Left);
             listViewEmploye.Columns.Add("Date de Recrutement", 150, HorizontalAlignment.Left);
 
-            FillListViewer(allStockEmployes);
+            FillListViewer(GetEmployeData());
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,6 +60,16 @@ namespace MSPR3.Forms.RH.Menu
         {
             Forms.RH.Menu.AddEmployeForm RH = new Forms.RH.Menu.AddEmployeForm();
             RH.ShowDialog();
+            Hide();
+        }
+
+        private List<Employe> GetEmployeData() {
+            List<Employe> allEmployesData = new List<Employe>();
+
+            string json = File.ReadAllText("../../../Forms/RH/Data/employeesDataStock.json");
+            allEmployesData = JsonConvert.DeserializeObject<List<Employe>>(json);
+
+            return allEmployesData;
         }
     }
 }
