@@ -98,9 +98,6 @@ namespace MSPR3.Forms.RH.Menu
             this.Controls.Add(this.btnRHStock);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
