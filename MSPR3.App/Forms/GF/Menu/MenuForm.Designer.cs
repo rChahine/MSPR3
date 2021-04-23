@@ -30,7 +30,6 @@ namespace MSPR3.Forms.GF.Menu
         private void InitializeComponent()
         {
             this.TitreMenuFinanciere = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
@@ -38,35 +37,22 @@ namespace MSPR3.Forms.GF.Menu
             // TitreMenuFinanciere
             // 
             this.TitreMenuFinanciere.AutoSize = true;
-            this.TitreMenuFinanciere.ForeColor = System.Drawing.SystemColors.Window;
-            this.TitreMenuFinanciere.Location = new System.Drawing.Point(244, 51);
+            this.TitreMenuFinanciere.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.TitreMenuFinanciere.Location = new System.Drawing.Point(244, 64);
             this.TitreMenuFinanciere.Name = "TitreMenuFinanciere";
-            this.TitreMenuFinanciere.Size = new System.Drawing.Size(154, 17);
+            this.TitreMenuFinanciere.Size = new System.Drawing.Size(154, 20);
             this.TitreMenuFinanciere.TabIndex = 3;
             this.TitreMenuFinanciere.Text = "GESTION FINANCIERE";
             this.TitreMenuFinanciere.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(52, 154);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(167, 17);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Gestion des prix d\'achats";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.White;
-            this.linkLabel2.Location = new System.Drawing.Point(52, 212);
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.Location = new System.Drawing.Point(52, 206);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(166, 17);
+            this.linkLabel2.Size = new System.Drawing.Size(168, 20);
             this.linkLabel2.TabIndex = 5;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Gestion des fournisseurs";
@@ -76,10 +62,10 @@ namespace MSPR3.Forms.GF.Menu
             // 
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.White;
-            this.linkLabel3.Location = new System.Drawing.Point(52, 272);
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.Location = new System.Drawing.Point(52, 285);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(79, 17);
+            this.linkLabel3.Size = new System.Drawing.Size(82, 20);
             this.linkLabel3.TabIndex = 6;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Facturation";
@@ -87,14 +73,14 @@ namespace MSPR3.Forms.GF.Menu
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.TitreMenuFinanciere);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
             this.ResumeLayout(false);
@@ -104,7 +90,6 @@ namespace MSPR3.Forms.GF.Menu
 
         #endregion
         private System.Windows.Forms.Label TitreMenuFinanciere;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
     }

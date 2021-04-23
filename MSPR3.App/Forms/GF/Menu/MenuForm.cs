@@ -20,12 +20,6 @@ namespace MSPR3.Forms.GF.Menu
 
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Forms.GF.GestionAchat.GestionAchatForm GestionA = new Forms.GF.GestionAchat.GestionAchatForm();
-            GestionA.ShowDialog();
-        }
-
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Forms.GF.Facturation.FacturationForm Facturation = new Forms.GF.Facturation.FacturationForm();
