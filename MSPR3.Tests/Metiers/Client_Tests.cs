@@ -4,6 +4,9 @@ using Xunit;
 
 namespace MSPR3.Metiers.Tests
 {
+    /// <summary>
+    /// Classe Client_Tests
+    /// </summary>
     public class Client_Tests
     {
         private readonly Produit produitLJ = new Produit(1, "Livret jeune", 1, 0);
@@ -15,6 +18,9 @@ namespace MSPR3.Metiers.Tests
         private readonly Produit produitGoldCard = new Produit(7, "Gold Card", 1, 0);
         private readonly Produit produitBlackCard = new Produit(8, "Black Card", 1, 0);
 
+        /// <summary>
+        /// Test le type de la classe Client
+        /// </summary>
         [Fact]
         public void ClientTests()
         {
@@ -24,6 +30,9 @@ namespace MSPR3.Metiers.Tests
             Assert.IsType<Client>(client);
         }
 
+        /// <summary>
+        /// Test les attributs de la classe Client
+        /// </summary>
         [Fact]
         public void ClientAttributesTests()
         {
@@ -41,6 +50,9 @@ namespace MSPR3.Metiers.Tests
             Assert.False(client.JustificatifDomicileValide);
         }
 
+        /// <summary>
+        /// Test le changement d'un attribut avec les setters
+        /// </summary>
         [Fact]
         public void ClientSetAttributesTests()
         {
@@ -67,6 +79,9 @@ namespace MSPR3.Metiers.Tests
             Assert.True(client.JustificatifDomicileValide);
         }
 
+        /// <summary>
+        /// Test la date de naissance d'un Client
+        /// </summary>
         [Fact]
         public void ClientDateAttributesTests()
         {
@@ -78,6 +93,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal(22, client.DateNaiss.Day);
         }
 
+        /// <summary>
+        /// Test l'égibilité des produits d'un Client de 25ans
+        /// </summary>
         [Fact]
         public void ClientEligible25YoTests()
         {
@@ -117,6 +135,9 @@ namespace MSPR3.Metiers.Tests
             Assert.False(client.EstEligible(produitBlackCard));
         }
 
+        /// <summary>
+        /// Test l'égibilité des produits d'un Client de 46ans
+        /// </summary>
         [Fact]
         public void ClientEligible46YoTests()
         {

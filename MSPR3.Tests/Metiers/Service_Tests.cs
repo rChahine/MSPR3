@@ -4,8 +4,14 @@ using Xunit;
 
 namespace MSPR3.Metiers.Tests
 {
+    /// <summary>
+    /// Classe Services_Tests
+    /// </summary>
     public class Service_Tests
     {
+        /// <summary>
+        /// Test le type de la classe Service
+        /// </summary>
         [Fact]
         public void ServiceTests()
         {
@@ -13,6 +19,9 @@ namespace MSPR3.Metiers.Tests
             Assert.IsType<Service>(service);
         }
 
+        /// <summary>
+        /// Test les attributs de la classe Service
+        /// </summary>
         [Fact]
         public void ServiceAttributesTests()
         {
@@ -23,6 +32,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal("RH", service.Designation);
         }
 
+        /// <summary>
+        /// Test le changement d'un attribut avec les setters
+        /// </summary>
         [Fact]
         public void ServiceSetAttributesTests()
         {
@@ -35,6 +47,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal("RessHum", service.Designation);
         }
 
+        /// <summary>
+        /// Test la liste et l'ajout dans la liste des Salarié d'un Service
+        /// </summary>
         [Fact]
         public void ServiceListSalarieTests()
         {

@@ -4,8 +4,14 @@ using Xunit;
 
 namespace MSPR3.Metiers.Tests
 {
+    /// <summary>
+    /// Classe Fournisseur_Tests
+    /// </summary>
     public class Fournisseur_Tests
     {
+        /// <summary>
+        /// Test le type de la classe Fournisseur
+        /// </summary>
         [Fact]
         public void FournisseurTests()
         {
@@ -13,6 +19,9 @@ namespace MSPR3.Metiers.Tests
             Assert.IsType<Fournisseur>(fournisseur);
         }
 
+        /// <summary>
+        /// Test les attributs de la classe Fournisseur
+        /// </summary>
         [Fact]
         public void FournisseurAttributesTests()
         {
@@ -24,6 +33,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal("testRaisonSocial", fournisseur.RaisonSocial);
         }
 
+        /// <summary>
+        /// Test la liste et l'ajout dans la liste des produit d'un Fournisseur
+        /// </summary>
         [Fact]
         public void FournisseurListProduitTests()
         {
@@ -51,6 +63,9 @@ namespace MSPR3.Metiers.Tests
             Assert.Equal("Souris", designationProduit2);
         }
 
+        /// <summary>
+        /// Test le changement d'un attribut avec les setters
+        /// </summary>
         [Fact]
         public void FournisseurSetAttributesTests()
         {
