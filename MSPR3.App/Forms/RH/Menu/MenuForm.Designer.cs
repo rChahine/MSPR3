@@ -54,7 +54,6 @@ namespace MSPR3.Forms.RH.Menu
             this.btnRHFinance.TabIndex = 1;
             this.btnRHFinance.Text = "RH Finance";
             this.btnRHFinance.UseVisualStyleBackColor = true;
-            this.btnRHFinance.Click += new System.EventHandler(this.btnRHFinance_Click);
             // 
             // btnRHProd
             // 
@@ -64,7 +63,6 @@ namespace MSPR3.Forms.RH.Menu
             this.btnRHProd.TabIndex = 2;
             this.btnRHProd.Text = "RH Production";
             this.btnRHProd.UseVisualStyleBackColor = true;
-            this.btnRHProd.Click += new System.EventHandler(this.btnRHProd_Click);
             // 
             // btnBack
             // 

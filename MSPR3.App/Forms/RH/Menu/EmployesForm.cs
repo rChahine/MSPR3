@@ -71,5 +71,13 @@ namespace MSPR3.Forms.RH.Menu
 
             return allEmployesData;
         }
+
+        private void delEmployeOnClick(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listViewEmploye.CheckedItems)
+            {
+                listViewEmploye.Items.Remove(item);
+            }
+        }
     }
 }

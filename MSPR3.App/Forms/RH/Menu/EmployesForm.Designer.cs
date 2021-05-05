@@ -29,6 +29,7 @@ namespace MSPR3.Forms.RH.Menu
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.listViewEmploye = new System.Windows.Forms.ListView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@ namespace MSPR3.Forms.RH.Menu
             // listViewEmploye
             // 
             this.listViewEmploye.HideSelection = false;
+            this.listViewEmploye.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.listViewEmploye.Location = new System.Drawing.Point(260, 12);
             this.listViewEmploye.Name = "listViewEmploye";
             this.listViewEmploye.Size = new System.Drawing.Size(528, 426);
@@ -62,6 +65,7 @@ namespace MSPR3.Forms.RH.Menu
             this.button2.TabIndex = 2;
             this.button2.Text = "Supprimer un employé";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.delEmployeOnClick);
             // 
             // label1
             // 
