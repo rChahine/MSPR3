@@ -11,8 +11,8 @@ pipeline {
         stage('Pack all files in portable directory') {
             steps {
                 bat '''
-                    mkdir .\v1.2.3
-                    move .\MSPR3.App\bin\Release\netcoreapp3.1\* .\v1.2.3\
+                    mkdir .\\v1.2.3
+                    move .\\MSPR3.App\\bin\\Release\\netcoreapp3.1\\* .\\v1.2.3\
                 '''
             }
         }
