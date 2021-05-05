@@ -21,11 +21,11 @@ pipeline {
                 bat '''
                     git config user.email "romain.chahine@outlook.fr"
                     git config user.name "rChahine"
-                    git checkout -b "v1.2.3"
+                    git checkout -b "🔖version-1.2.3"
                     git rm -r --cached .
                     git add v1.2.3
                     git commit -m "🔖 v1.2.3"
-                    git push origin v1.2.3 --tags
+                    git push origin 🔖version-1.2.3
                 '''
             }
         }
