@@ -9,6 +9,7 @@
 
 # Normes de développement
 
+
 Pour chaque évolution, une branche sera crée à partir de la “dev” et doit être préfixé par le type de maintenance. 
 
 Les commits doivent être en anglais et être préfixé par un [Gitmoji](https://gitmoji.dev/)
