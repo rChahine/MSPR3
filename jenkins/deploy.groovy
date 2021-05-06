@@ -20,7 +20,8 @@ pipeline {
             steps {
                 bat '''
                     git clone git@github.com:rChahine/MSPR3-release.git
-                    move .\\v1.2.3\ .\\MSPR3-release\
+                    move .\\v1.2.3\* .\\MSPR3-release\
+                    cd  MSPR3-release
                     git checkout -b "version-1-2-3"
                     git add .\\v1.2.3\*
                     git commit -m "🔖 v1.2.3"
