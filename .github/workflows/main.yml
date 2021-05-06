@@ -1,0 +1,17 @@
+name: AnalyseMain&Dev
+
+on:
+  push:
+    branches: [ main, dev ]
+
+jobs:
+  self-test:
+   runs-on: ubuntu-latest
+   name: Resharper analysis
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Inspect
+       uses: nbadal/inspectcode-action@v1
+       with:
+          solution: './MSPR3.sln'
