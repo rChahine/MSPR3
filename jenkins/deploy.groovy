@@ -19,7 +19,7 @@ pipeline {
         stage('Send folder to git') {
             steps {
                 bat '''
-                    git remote add origin https://github.com/rChahine/MSPR3.git
+                    git remote set-url origin git@github.com:rChahine/MSPR3.git
                     git config --global user.email "pierrick38800@gmail.com"
                     git config --global user.name "Pierrick-Loiacono"
                     git checkout -b "version-1-2-3"
