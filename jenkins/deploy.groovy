@@ -19,8 +19,8 @@ pipeline {
         stage('Send folder to git') {
             steps {
                 bat '''
-                    git config user.email "pierrick38800@gmail.com"
-                    git config user.name "Pierrick-Loiacono"
+                    git config --global user.email "pierrick38800@gmail.com"
+                    git config --global user.name "Pierrick-Loiacono"
                     git checkout -b "version-1.2.3"
                     git rm -r --cached .
                     git add v1.2.3
