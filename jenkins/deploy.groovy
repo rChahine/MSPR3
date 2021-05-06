@@ -22,11 +22,11 @@ pipeline {
                     git remote add origin https://github.com/rChahine/MSPR3.git
                     git config --global user.email "pierrick38800@gmail.com"
                     git config --global user.name "Pierrick-Loiacono"
-                    git checkout -b "version-1.2.3"
+                    git checkout -b "version-1-2-3"
                     git rm -r --cached .
                     git add v1.2.3
                     git commit -m "🔖 v1.2.3"
-                    git push origin version-1.2.3
+                    git push origin version-1-2-3
                 '''
             }
         }
