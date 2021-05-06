@@ -22,7 +22,7 @@ pipeline {
                     git clone git@github.com:rChahine/MSPR3-release.git
                     move .\\v1.2.3\\* .\\MSPR3-release\
                     cd "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\deploy\\MSPR3-release"
-                    git checkout -b "version-1-2-3"
+                    git checkout -b "version-1.2.3"
                     git add .
                     git commit -m "🔖 v1.2.3"
                     git push origin version-1.2.3
