@@ -19,14 +19,12 @@ pipeline {
         stage('Send folder to git') {
             steps {
                 bat '''
-                    git remote set-url origin git@github.com:rChahine/MSPR3.git
-                    git config --global user.email "pierrick38800@gmail.com"
-                    git config --global user.name "Pierrick-Loiacono"
+                    git clone git@github.com:rChahine/MSPR3-release.git
+                    move .\\v1.2.3\ .\\MSPR3-release\
                     git checkout -b "version-1-2-3"
-                    git rm -r --cached .
-                    git add v1.2.3
+                    git add .\\v1.2.3\*
                     git commit -m "🔖 v1.2.3"
-                    git push origin version-1-2-3
+                    git push origin version-1.2.3
                 '''
             }
         }
