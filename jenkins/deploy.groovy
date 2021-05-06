@@ -23,7 +23,7 @@ pipeline {
                     move .\\v1.2.3\\* .\\MSPR3-release\
                     cd  MSPR3-release
                     git checkout -b "version-1-2-3"
-                    git add .\\v1.2.3\*
+                    git add .
                     git commit -m "🔖 v1.2.3"
                     git push origin version-1.2.3
                 '''
