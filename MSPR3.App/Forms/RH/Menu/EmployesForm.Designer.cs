@@ -88,7 +88,6 @@ namespace MSPR3.Forms.RH.Menu
             this.Controls.Add(this.listViewEmploye);
             this.Name = "EmployesForm";
             this.Text = "EmployesForm";
-            this.Click += new System.EventHandler(this.EmployesForm_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

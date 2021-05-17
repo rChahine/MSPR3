@@ -12,6 +12,9 @@ namespace MSPR3.Forms.GA.Menu
 {
     public partial class MenuForm : Form
     {
+        /// <summary>
+        /// Constructeur de la classe
+        /// </summary>
         public MenuForm()
         {
             InitializeComponent();

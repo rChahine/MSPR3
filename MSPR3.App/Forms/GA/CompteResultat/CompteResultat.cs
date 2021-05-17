@@ -10,13 +10,29 @@ using System.Windows.Forms;
 
 namespace MSPR3.Forms.GA.CompteResultat
 {
+    /// <summary>
+    /// Classe qui permet d'afficher le compte de résultat
+    /// </summary>
     public partial class CompteResultat : Form
     {
-
+        /// <summary>
+        /// Revenus
+        /// </summary>
         private int totalIncome = 0;
+
+        /// <summary>
+        /// charges
+        /// </summary>
         private int totalCharge = 0;
+
+        /// <summary>
+        /// bénéfices ou perte (revenus - charges)
+        /// </summary>
         private int balance = 0;
 
+        /// <summary>
+        /// Constructeur de la classe, initialise les valeurs des labels
+        /// </summary>
         public CompteResultat()
         {
             InitializeComponent();
@@ -50,8 +66,8 @@ namespace MSPR3.Forms.GA.CompteResultat
         /// <summary>
         /// Ajoute un revenu dans le datagridview et actualise le label
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void btAddIncome_Click(object sender, EventArgs e)
         {
             try { 
@@ -76,8 +92,8 @@ namespace MSPR3.Forms.GA.CompteResultat
         /// <summary>
         /// Ajoute une charge dans le datagridview et change la valeur du label
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void btAddCharge_Click(object sender, EventArgs e)
         {
             try
@@ -99,6 +115,11 @@ namespace MSPR3.Forms.GA.CompteResultat
             }
         }
 
+        /// <summary>
+        /// Permet de recharger le numéro des lignes du datagridview à la suppression ou l'ajout d'une valeur
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void dgvCharge_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             using (SolidBrush b = new SolidBrush(this.dgvCharge.RowHeadersDefaultCellStyle.ForeColor))
@@ -107,6 +128,11 @@ namespace MSPR3.Forms.GA.CompteResultat
             }
         }
 
+        /// <summary>
+        /// Permet de recharger le numéro des lignes du datagridview à la suppression ou l'ajout d'une valeur
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void dgvIncome_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
         {
             using (SolidBrush b = new SolidBrush(this.dgvIncome.RowHeadersDefaultCellStyle.ForeColor))
@@ -115,6 +141,11 @@ namespace MSPR3.Forms.GA.CompteResultat
             }
         }
 
+        /// <summary>
+        /// Supprime une ligne dans les revenus du datagrid view des revenus
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void btLineIncome_Click(object sender, EventArgs e)
         {
             try
@@ -140,6 +171,11 @@ namespace MSPR3.Forms.GA.CompteResultat
             }
         }
 
+        /// <summary>
+        /// Supprime une ligne dans les charges du datagrid view des charges
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void btLineCharge_Click(object sender, EventArgs e)
         {
             try

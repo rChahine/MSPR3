@@ -65,7 +65,6 @@ namespace MSPR3.Forms.RH.Menu
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(581, 27);
             this.textBoxNom.TabIndex = 2;
-            this.textBoxNom.TextChanged += new System.EventHandler(this.OnNomChanged);
             // 
             // textBoxPrenom
             // 
@@ -73,7 +72,6 @@ namespace MSPR3.Forms.RH.Menu
             this.textBoxPrenom.Name = "textBoxPrenom";
             this.textBoxPrenom.Size = new System.Drawing.Size(581, 27);
             this.textBoxPrenom.TabIndex = 4;
-            this.textBoxPrenom.TextChanged += new System.EventHandler(this.OnPrenomChanged);
             // 
             // label2
             // 
@@ -90,7 +88,6 @@ namespace MSPR3.Forms.RH.Menu
             this.textBoxService.Name = "textBoxService";
             this.textBoxService.Size = new System.Drawing.Size(581, 27);
             this.textBoxService.TabIndex = 6;
-            this.textBoxService.TextChanged += new System.EventHandler(this.OnServiceChanged);
             // 
             // label3
             // 
@@ -107,7 +104,6 @@ namespace MSPR3.Forms.RH.Menu
             this.textBoxDateRecrutement.Name = "textBoxDateRecrutement";
             this.textBoxDateRecrutement.Size = new System.Drawing.Size(581, 27);
             this.textBoxDateRecrutement.TabIndex = 8;
-            this.textBoxDateRecrutement.TextChanged += new System.EventHandler(this.OnDateRecrutementChanged);
             // 
             // label4
             // 

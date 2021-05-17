@@ -27,10 +27,10 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Constructeur de la classe Fournisseur
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="raisonSocial"></param>
-        /// <param name="adresse"></param>
-        /// <param name="produits"></param>
+        /// <param name="id">Id du fournisseur</param>
+        /// <param name="raisonSocial">raison social de l'entreprise</param>
+        /// <param name="adresse">Adresse de l'entreprise</param>
+        /// <param name="produits">Produits fournis par l'entreprise</param>
         public Fournisseur(int id, string raisonSocial, string adresse, List<Produit> produits)
         {
             this.id = id;

@@ -12,10 +12,19 @@ using System.Windows.Forms;
 
 namespace MSPR3.Forms.RH.Menu
 {
+    /// <summary>
+    /// Classe du form des employes
+    /// </summary>
     public partial class EmployesForm : Form
     {
+        /// <summary>
+        /// Chaine à sérialiser
+        /// </summary>
         private string jsonString;
 
+        /// <summary>
+        /// Constructeur de la classe
+        /// </summary>
         public EmployesForm()
         {
             InitializeComponent();
@@ -36,11 +45,10 @@ namespace MSPR3.Forms.RH.Menu
             FillListViewer(GetEmployeData());
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+        /// <summary>
+        /// Rempli la vue des employés
+        /// </summary>
+        /// <param name="listEmploye"></param>
         private void FillListViewer(List<Employe> listEmploye)
         {
             foreach(Employe employe in listEmploye)
@@ -51,11 +59,11 @@ namespace MSPR3.Forms.RH.Menu
             }
         }
 
-        private void EmployesForm_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Affiche le formulaire d'ajout d'employé
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void adEmployeOnClick(object sender, EventArgs e)
         {
             Forms.RH.Menu.AddEmployeForm RH = new Forms.RH.Menu.AddEmployeForm();
@@ -63,6 +71,10 @@ namespace MSPR3.Forms.RH.Menu
             Hide();
         }
 
+        /// <summary>
+        /// Récupère la liste des employés
+        /// </summary>
+        /// <returns>Une liste des employé</returns>
         private List<Employe> GetEmployeData() {
             List<Employe> allEmployesData = new List<Employe>();
 
@@ -72,6 +84,11 @@ namespace MSPR3.Forms.RH.Menu
             return allEmployesData;
         }
 
+        /// <summary>
+        /// Supprime un employé au clique
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void delEmployeOnClick(object sender, EventArgs e)
         {
             foreach (ListViewItem item in listViewEmploye.CheckedItems)

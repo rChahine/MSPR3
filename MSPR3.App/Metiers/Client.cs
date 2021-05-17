@@ -34,14 +34,14 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Constructeur de la classe Client
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="prenom"></param>
-        /// <param name="nom"></param>
-        /// <param name="dateNaiss"></param>
-        /// <param name="salaireAnnuel"></param>
-        /// <param name="pieceIdValide"></param>
-        /// <param name="justificatifDomicileValide"></param>
-        /// <param name="justificatifActiviteValide"></param>
+        /// <param name="id"> id du client </param>
+        /// <param name="prenom">prenom du client</param>
+        /// <param name="nom"> nom du client</param>
+        /// <param name="dateNaiss"> date de naissance du client</param>
+        /// <param name="salaireAnnuel">salaire d'un client</param>
+        /// <param name="pieceIdValide">vrai si la piece d'identité est valide</param>
+        /// <param name="justificatifDomicileValide">Vrai si le justificatif de domicile est conforme</param>
+        /// <param name="justificatifActiviteValide">Vrai si le justificatif d'activité est conforme</param>
         public Client(int id, string prenom, string nom, DateTime dateNaiss, int salaireAnnuel, bool pieceIdValide, bool justificatifDomicileValide, bool justificatifActiviteValide)
         {
             this.id = id;
@@ -57,8 +57,8 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Retourne si le Client est éligible a un Produit
         /// </summary>
-        /// <param name="produit"></param>
-        /// <returns>Retourne false ou true</returns>
+        /// <param name="produit">Produit dont on vérifie l'éligibilité</param>
+        /// <returns>Vrai si elligible</returns>
         public bool EstEligible(Produit produit) 
         {
             switch (produit.Designation)
@@ -111,7 +111,7 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Retourne l'age du Client
         /// </summary>
-        /// <returns>Retourne age</returns>
+        /// <returns>Retourne l'age</returns>
         public int CalculAge()
         {
             int age = DateTime.Now.Year - DateNaiss.Year;
@@ -121,7 +121,7 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Retourne si le Client peut être éligible en fonction si piece d'identité et justificatif domicile sont ok
         /// </summary>
-        /// <returns>Retourne false ou true</returns>
+        /// <returns>Retourne vrai si eligible</returns>
         public bool PeutEtreEligible()
         {
             return pieceIdValide && justificatifDomicileValide;

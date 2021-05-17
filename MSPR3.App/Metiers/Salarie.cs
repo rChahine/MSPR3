@@ -28,10 +28,10 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Constructeur de la classe Salarie
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="prenom"></param>
-        /// <param name="nom"></param>
-        /// <param name="dateNaiss"></param>
+        /// <param name="id">id du salarié</param>
+        /// <param name="prenom">prénom du salarié</param>
+        /// <param name="nom"> nom du salarié</param>
+        /// <param name="dateNaiss"> date de naissance du salarié</param>
         public Salarie(int id, string prenom, string nom, DateTime dateNaiss)
         {
             this.id = id;

@@ -12,33 +12,24 @@ using System.Windows.Forms;
 
 namespace MSPR3.Forms.RH.Menu
 {
+    /// <summary>
+    /// Classe pour ajouter un employé
+    /// </summary>
     public partial class AddEmployeForm : Form
     {
+        /// <summary>
+        /// Constructeur de la classe
+        /// </summary>
         public AddEmployeForm()
         {
             InitializeComponent();
         }
 
-        private void OnNomChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OnPrenomChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OnServiceChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OnDateRecrutementChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Ajoute un employé dans la liste
+        /// </summary>
+        /// <param name="sender">Référence vers l'objet ayant trigger le clique</param>
+        /// <param name="e">Arguments de l'évènement</param>
         private void button1_Click(object sender, EventArgs e)
         {
             Employe newEmploye = new Employe(textBoxNom.Text, textBoxPrenom.Text, textBoxService.Text, textBoxDateRecrutement.Text);
@@ -50,6 +41,10 @@ namespace MSPR3.Forms.RH.Menu
             RH.ShowDialog();
         }
 
+        /// <summary>
+        /// Ajouter un employé dans une liste
+        /// </summary>
+        /// <param name="newEmploye">Employe</param>
         private void AddEmployeToData(Employe newEmploye)
         {
             List<Employe> employelist = new List<Employe>();

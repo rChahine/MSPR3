@@ -26,9 +26,9 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Constructeur de la classe Service
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="designation"></param>
-        /// <param name="salaries"></param>
+        /// <param name="id">Id du service</param>
+        /// <param name="designation">Désignation du service</param>
+        /// <param name="salaries">Liste des salariés du service</param>
         public Service(int id, string designation, List<Salarie> salaries)
         {
             this.id = id;

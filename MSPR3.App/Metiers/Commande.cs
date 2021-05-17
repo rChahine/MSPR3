@@ -25,9 +25,9 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Construteur de la classe Commande
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="date"></param>
-        /// <param name="produits"></param>
+        /// <param name="id"> id d'une commande</param>
+        /// <param name="date"> Date d'une commande</param>
+        /// <param name="produits"> Liste des produits de la commande</param>
         public Commande(int id, DateTime date, Dictionary<Produit, int> produits)
         {
             this.id = id;

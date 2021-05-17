@@ -27,10 +27,10 @@ namespace MSPR3.Metiers
         /// <summary>
         /// Constructeur de la classe Produit
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="designation"></param>
-        /// <param name="quantite"></param>
-        /// <param name="prix"></param>
+        /// <param name="id">Id du produit </param>
+        /// <param name="designation">Désignation du produit</param>
+        /// <param name="quantite">Quantite disponible pour un produit</param>
+        /// <param name="prix">Prix d'un produit</param>
         public Produit(int id, string designation, int quantite, double prix)
         {
             this.id = id;
