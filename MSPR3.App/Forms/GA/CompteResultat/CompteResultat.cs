@@ -183,7 +183,7 @@ namespace MSPR3.Forms.GA.CompteResultat
                 int line = Int32.Parse(lineCharge.Text) -1;
                 int value = (int)dgvCharge.Rows[line].Cells[0].Value;
 
-                dgvIncome.Rows.RemoveAt(line);
+                dgvCharge.Rows.RemoveAt(line);
 
                 // Enlever un income
                 this.totalIncome -= value;
