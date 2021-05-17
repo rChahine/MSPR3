@@ -24,10 +24,10 @@
 */
 var NAVTREE =
 [
-  [ "MSPR3APP", "index.html", [
-    [ "Technologies utilisées", "md__r_e_a_d_m_e.html", [
-      [ "Planning du projet", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Normes de développement", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+  [ "MSPR3", "index.html", [
+    [ "Technologies utilisées", "md__e___projet__m_s_p_r3__m_s_p_r3__r_e_a_d_m_e.html", [
+      [ "Planning du projet", "md__e___projet__m_s_p_r3__m_s_p_r3__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Normes de développement", "md__e___projet__m_s_p_r3__m_s_p_r3__r_e_a_d_m_e.html#autotoc_md2", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ]
@@ -43,18 +43,14 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Typedefs", "globals_type.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_accueil_form_8_designer_8cs.html"
+"_8_n_e_t_framework_00_version_0av4_87_82_8_assembly_attributes_8cs.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
