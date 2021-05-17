@@ -11,19 +11,21 @@ pipeline {
         stage('Pack all files in portable directory') {
             steps {
                 bat '''
-                    mkdir .\v1.2.3
-                    move .\MSPR3.App\bin\Release\netcoreapp3.1\* .\v1.2.3\
+                    mkdir .\\v1.2.3
+                    move .\\MSPR3.App\\bin\\Release\\netcoreapp3.1\\* .\\v1.2.3\
                 '''
             }
         }
         stage('Send folder to git') {
             steps {
                 bat '''
-                    git checkout -b "v1.2.3"
-                    git rm -r --cached .
-                    git add v1.2.3
+                    git clone git@github.com:rChahine/MSPR3-release.git
+                    move .\\v1.2.3\\* .\\MSPR3-release\
+                    cd "C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\deploy\\MSPR3-release"
+                    git checkout -b "version-1.2.3"
+                    git add .
                     git commit -m "🔖 v1.2.3"
-                    git push origin v1.2.3 --tags
+                    git push origin version-1.2.3
                 '''
             }
         }
