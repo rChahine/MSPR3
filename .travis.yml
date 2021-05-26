@@ -1,3 +1,6 @@
+language: csharp
+solution: MSPR3.sln
+
 # This will run on Travis' 'new' container-based infrastructure
 sudo: false 
 
